@@ -1,0 +1,520 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+ 
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background:brown;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor:pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+} 
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+} 
+
+.navbar{
+    position: fixed;
+    padding-top: 0px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    width: 100vw;
+    padding-bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.351);
+}
+.navbar .sticky{
+    padding-top: 15px;
+    /* background:brown;   */
+}
+
+
+.navbar .logo{
+padding: 0px;
+}
+
+.navbar .logo a{
+    color:#211103;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.navbar .logo span{
+    
+    color: rgb(117, 16, 16);
+}
+
+.navbar .menu{
+    width: 800px;
+    padding-left: 300px;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display:inline-block;
+    padding-top: 40px;
+
+
+}
+.navbar .menu li a{
+    background-color:#7B0D1E;
+    color:#F8E5EE;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    border: 3.5px solid transparent;
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.navbar .menu li a:hover{
+color:#3d1308;
+background: transparent;
+}
+
+.load{
+    animation:slide 2s;
+}
+
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    animation: slide 40s infinite;
+
+}
+.content{
+    color:black;
+    width: 100%;
+    height: 100vh;
+    
+}
+.principal{
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+   
+    letter-spacing: 5px;
+    /* width: 100%; */
+    /* height: 100vh; */
+    text-align: center;
+}
+.principal h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.principal h1 span{
+    color:#7B0D1E;
+}
+.principal h4{
+    color:#3D1308;
+
+}
+
+@keyframes slide{
+    0%{
+        background-image: url('../image/patient.jpg');
+        opacity:50%;
+    }
+    20%{
+        background-image: url('../image/blood-sample-by-stethoscope.jpg');
+        opacity:100%;
+    }
+    20.01%{
+        background-image: url('../image/blood-sample-by-stethoscope.jpg');
+        opacity:50%;
+    }
+    40%{
+        background-image: url('../image/blood1.jpg');
+        opacity:100%;
+    }
+    40.01%{
+        background-image: url('../image/blood1.jpg');
+        opacity:50%;
+    }
+    60%{
+        background-image: url('../image/blood2.jpg');
+        opacity:100%;
+    }
+    60.01%{
+        background-image: url('../image/blood2.jpg');
+        opacity:50%;
+    }
+    80%{
+        background-image: url('../image/blood3.jpg');
+        opacity:100%;
+    }
+    80.01%{
+        background-image: url('../image/blood3.jpg');
+        opacity:50%;
+    }
+    100%{
+        background-image: url('../image/blood4.jpg');
+        opacity:100%;
+    }
+   
+}
+/* about section */
+.about{
+    height: 130vh;
+    font-family: 'PT Serif', serif;
+    background-size: cover; 
+    z-index:-1;
+    background-color:#F8E5EE;
+ }
+
+
+.about .title{
+    position: relative;
+    text-align: center;
+    color:#9F2042;
+    font-size: 40px;
+    font-weight:500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.about .title::before{
+content:"";
+position:absolute;
+bottom: 0px;
+ left:50%; 
+width: 200px;
+height: 3px;
+background:black;
+transform:translateX(-50%) ;
+
+
+
+}
+.about .title::after{
+    content:"we provide";
+    position:absolute;
+    bottom: -13px;
+     left:50%; 
+     font-size: 20px;
+     color:black;
+     padding: 4px;
+    background-color:#F8E5EE;
+    transform:translateX(-50%) ;
+    }
+
+.about .about-content .left img{
+    height: 500px;
+    width: 700px;
+    object-fit: cover;
+    border-radius: 6px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    z-index: 1;
+
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.about .about-content .left{
+    width: 45%;
+
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 300px;
+}
+.about .about-content .right .text span{
+    color:#9F2042;
+}
+.about .about-content .right p{
+    text-align: justify;
+    font-size: large;
+    margin-left: 300px;
+    
+}
+
+.about .about-content .column{
+    width: 50%;
+}
+/* service section starting */
+/* .service.title h2{
+    position: relative;
+    text-align: center;
+    color:#9F2042;
+    font-size: 40px;
+    font-weight:500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.service .title::before{
+content:"";
+position:absolute;
+bottom: 0px;
+ left:50%; 
+width: 200px;
+height: 3px;
+background:black;
+transform:translateX(-50%) ;
+
+
+
+}
+.service .title::after{
+    content:"we provide";
+    position:absolute;
+    bottom: -13px;
+     left:50%; 
+     font-size: 20px;
+     color:black;
+     padding: 4px;
+    background-color:#F8E5EE;
+    transform:translateX(-50%) ;
+    } */
+
+.wrapper{
+    width: 80%;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.content{
+
+    padding:10% 0 ;
+}
+.content h1{
+    margin: 14px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: white;
+
+}
+.content p{
+    width: 85%;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+
+}
+.content a{
+    text-decoration: none;
+    background:#A63446;
+    color: #f1f1f1;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.icon{
+    width: 64px;
+    height: 64px;
+    background: #f1f1f1;
+    margin: auto;
+    border-radius: 50%;
+
+}
+
+
+.single-box{
+    width: 400px;
+    height: 400px;
+    margin: 0 15px;
+    transition: .7s;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../image/RokterEmoji_2.png);
+    text-align: center;
+    color:white;
+    background-size: cover;
+    background-position: center center;
+
+}
+.single-box:hover{
+    transform: scale(1.2);
+    z-index:2 ;
+}
+
+
+/* log in form section start */
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../image/blood-sample-by-stethoscope.jpg);
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position:relative;
+    margin: 6% auto;
+    background:#F8E5EE;
+    padding: 5px;
+    overflow: hidden;
+}
+.button-center{
+    padding-top: 20px;
+    padding-left: 72px;
+}
+.button-box{
+    width: 220px;
+    height: 35px;
+    position:relative;
+    box-shadow:0 0 20px 9px brown;
+    border-radius: 30px;
+   }
+
+.toggle-btn{
+    padding: 5px 25px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background:linear-gradient(to right,#7B0D1E,#9F2042,#F8E5EE);
+    border-radius: 30px;
+    transition: .5s;
+    text-align: center;
+}
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 30px;
+    margin:0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.social-icons img:hover{
+    transform: scale(1.3);
+    transition: 0.5s;
+    box-shadow: 2px 5px 2px 5px rgba(109, 144, 158, 0.149);
+
+}
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left:0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+/* span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+} */
+.submit-btn{
+    width: 100%;
+    padding: 5px 40px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#7B0D1E,#9F2042,#F8E5EE);
+    border:0;
+    border-radius: 30px;
+    outline: none;
+
+}
+
+#login{
+    left: 50px;
+}
+#resister{
+    left: 450px;
+    }
+
+    .loginbutton{
+        background-color:#f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 30px;
+        transition: transform .4s; 
+    }
